@@ -5,14 +5,21 @@ import {
   fetchStart,
   request,
 } from './actions'
+import {
+  charSchema,
+  charListSchema,
+} from './schemas'
 
-
-export default {
-  configStore,
-  actions: {
+const actions =  {
     fetchError,
     fetchOK,
     fetchStart,
     request,
-  }
+}
+
+export {
+  actions,
+  configStore,
+  charSchema,
+  charListSchema,
 }
