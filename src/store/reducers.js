@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux';
 import * as actions from './actions';
 
-export const resultReducer = (state=[], action) => {
+export const charsIdListReducer = (state=[], action) => {
   switch (action.type) {
     case actions.FETCH_OK:
       return [...state, ...action.payload.result]
@@ -10,7 +10,7 @@ export const resultReducer = (state=[], action) => {
   }
 }
 
-export const entitiesReducer = (state={}, action) => {
+export const charsReducer = (state={}, action) => {
   switch (action.type) {
     case actions.FETCH_OK:
       return {...state, ...action.payload.entities}
@@ -32,7 +32,7 @@ export const fetchStatusReducer = (state={fetchStatus: 'notyet'}, action) => {
 }
 
 export const rootReducer = combineReducers({
-  entities: entitiesReducer,
-  result: resultReducer,
+  chars: charsReducer,
+  charsIdList: charsIdListReducer,
   fetchStatus: fetchStatusReducer
 })

@@ -1,6 +1,9 @@
 {
   "presets": [
     "env",
-    "react-app"
+    "react"
+  ],
+  "plugins": [
+    "transform-object-rest-spread"
   ]
 }

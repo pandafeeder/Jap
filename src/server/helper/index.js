@@ -1,5 +1,5 @@
 
-export const renderHtmlTemplate = (reactApp, preloadedStore) => {
+const renderHtmlTemplate = (reactApp, preloadedStore) => {
   return `
 <!doctype html>
 <html>
@@ -16,3 +16,5 @@ export const renderHtmlTemplate = (reactApp, preloadedStore) => {
 </html>
 `
 }
+
+export default renderHtmlTemplate
